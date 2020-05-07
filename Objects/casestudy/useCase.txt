@@ -1,0 +1,17 @@
+Simple command-line notebook application
+-Notes are short memos stored in a notebook. Each
+-Note should record the day it was written and can have tags added for easy querying.
+-It should be possible to modify notes. We also need to be able to search for notes.
+-All of these things should be done from the command line
+-The Notebook object has the list of notes as an attribute.
+ It will also need a search method that returns a list of filtered notes.
+
+
+ Folder Struct
+-The menu interface should clearly be in its own module, 
+since it will be an executable script,
+-The Notebook and Note objects can live together in one module
+parent_directory/
+    notebook.py
+    menu.py
+    command_option.py
