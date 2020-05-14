@@ -61,7 +61,7 @@ class House(Property):
         print("# of stories: {}".format(self.num_stories))
         print("garage: {}".format(self.garage))
         print("fenced yard: {}".format(self.fenced))
-        
+
     @staticmethod
     def prompt_init():
         parent_init = Property.prompt_init()
@@ -76,4 +76,19 @@ class House(Property):
         "num_stories": num_stories
         })
         return parent_init
+class Purchase:
+    def __init__(self, price='', taxes='', **kwargs):
+        super().__init__(**kwargs)
+        self.price = price
+        self.taxes = taxes
+    def display(self):
+        super().display()
+        print("PURCHASE DETAILS")
+        print("selling price: {}".format(self.price))
+        print("estimated taxes: {}".format(self.taxes))
+    @staticmethod
+    def prompt_init():
+        return dict(
+        price=input("What is the selling price? "),
+        taxes=input("What are the estimated taxes? "))
 
