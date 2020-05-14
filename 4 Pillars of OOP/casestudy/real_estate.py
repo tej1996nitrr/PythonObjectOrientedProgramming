@@ -91,4 +91,13 @@ class Purchase:
         return dict(
         price=input("What is the selling price? "),
         taxes=input("What are the estimated taxes? "))
-
+class Rental:
+    def __init__(self, furnished='', utilities='',
+    rent='', **kwargs):
+        super().__init__(**kwargs)
+        self.furnished = furnished
+        self.rent = rent
+        self.utilities = utilities
+    def display(self):
+        super().display()
+        print("RENTAL DETAILS")
