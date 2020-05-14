@@ -118,3 +118,9 @@ class HouseRental(Rental, House):
         init = House.prompt_init()
         init.update(Rental.prompt_init())
         return init
+class ApartmentRental(Rental, Apartment):
+    @staticmethod
+    def prompt_init():
+        init = Apartment.prompt_init()
+        init.update(Rental.prompt_init())
+        return init
